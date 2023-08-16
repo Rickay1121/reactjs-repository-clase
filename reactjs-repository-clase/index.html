@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
-
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
     <title>Frontend Mentor | Product preview card component</title>
 
 <body>
@@ -24,7 +22,7 @@
 
 <header>
     <section class="Imagen1">
-        <figure> <img src="./images/image-product-desktop.jpg" width="210px" height="320px" > </figure>
+        <figure> <img src="./images/image-product-desktop.jpg" width="230px" height="374px" > </figure>
     </section>
     <section class="Titulos">
         <h5> PERFUME </h5>
@@ -34,9 +32,10 @@
             Olivier Polge, Perfumer-Creator <br>
             for the House of CHANEL.
         </p>
-        <p id="Precio"> $149.99 </p> 
-        <p id="PrecioCaro"> $169.99 </p>
-        <p id="Boton"> Add to Cart </p>
+        <div class="Precio">
+            $149.99 <a href="#" style="text-decoration:none"> <del> $169.99 </del></a>
+        </div>
+        <p id="Boton"> 🛒 Add to Cart </p>
     </section>
 </header>
 
@@ -44,37 +43,23 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&display=swap');
-    main{
-        display: flex;
-        flex-wrap: wrap;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        justify-content: center;
-        margin: 0 auto;
-        max-width: 500px;
-        width: 200px;
-        height: 130px;
-    }
 
     header{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: end;
+        flex-direction: column;
         margin: 0 auto;
         max-width: 500px;
-        flex-direction: column;
         background-color: hsl(0, 0%, 100%);
-        width: 700px;
-        height: 350px;
+        width: 500px;
+        height: 370px;
         border: hsl(0, 0%, 100%) 4px solid; 
-	    border-radius: 10px;
+        border-radius: 10px;
     }
 
     body{
         background-color:hsl(30, 38%, 92%) ;
-        justify-content: center;
     }
 
     .attribution {
@@ -84,11 +69,6 @@
 
     .attribution a {
         color: hsl(228, 45%, 44%);
-    }
-
-    section.Imagen1 {
-        display: flex;
-        justify-content: space-between;
     }
 
     section.Titulos h1 {
@@ -104,31 +84,32 @@
 
     #Desc{
         font-family: 'Montserrat';
+        color: gray;
         font-size: 12px;
     }
 
-    #Precio{
+    .Precio {
         font-family: 'Fraunces';
         color: hsl(158, 36%, 37%);
-        font-size: 20px;
+        font-size: 25px;
     }
 
-    #PrecioCaro{
+    .Precio a {
         font-family: 'Montserrat';
-        align-items:flex-end
+        color: rgb(101, 101, 101);
+        font-size: 13px;
     }
 
     #Boton{
-        align-items: center;
+        display: flex;
+        justify-content: center;
         font-family: 'Montserrat';
         background-color: hsl(158, 36%, 37%);
-  	    border: hsl(158, 36%, 37%) 2px solid ;
-  		border-radius: 10px;
+        border: hsl(158, 36%, 37%) 2px solid ;
+        border-radius: 5px;
+        padding: 7px 7px;
         color: white;
     }
-
-
-
 
 </style>
 
